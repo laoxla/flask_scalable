@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+{% extends 'layout.html' %}
+
+{% block title %} SignIn {% endblock %}
+
+{% block content %}
+
+    <div class="container form">
+        <h4>Login Here</h4>
+        <hr>
+        <br>
+        {{ form.hidden_tag() }}
+        {{ wtf.quick_form(form) }}
+
+    </div>
+
+{% endblock content %}
